@@ -1,0 +1,17 @@
+## editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+## https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/
+indent_style = tab
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{yml,yaml}]
+indent_style = space
+
+[*.md]
+trim_trailing_whitespace = false

@@ -3,7 +3,7 @@ var main = document.getElementById("home");
 var tableDecoupe = [];
 
 var counter = 0;
-var nbrImg = 62;
+var nbrImg = 60;
 var nbrImgMax = 20;
 
 var memory = [0];
@@ -41,9 +41,7 @@ x.addEventListener("change", function () {
 
 function generateHome() {
 	var imagesAffichees = document.querySelectorAll(".imgDecoupee");
-	var randomG = Math.floor(Math.random() * nbrColumn + 1);
-	var randomI = Math.floor(Math.random() * nbrColumn + 1);
-	var randomN = Math.floor(Math.random() * nbrColumn + 1);
+
 	var randomGinC = Math.floor(Math.random() * nbrColumn + 1);
 	var randomGinR = Math.floor(Math.random() * 3 + 1);
 

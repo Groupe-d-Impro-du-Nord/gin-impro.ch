@@ -1,5 +1,26 @@
 # gin-impro.ch
 
+## Start the application for local development
+
+### Prerequisites
+
+- [Visual Studio Code](https://code.visualstudio.com/) installed
+- Visual Studio Code Extensions installed, they are listed in the `.vscode/extensions.json` file
+
+### Run the Website Locally
+
+1. Open the project folder in Visual Studio Code
+2. Install the `ritwickdey.LiveServer` extension if not already installed
+3. Right-click on the `index.html` file in the file explorer
+4. Select "Open with Live Server" from the context menu
+5. The website will automatically open in your default browser
+6. Any changes you make to the files will automatically refresh the browser
+
+Alternatively, you can:
+
+- Use the "Go Live" button in the bottom status bar of VS Code
+- Use the Command Palette (Ctrl+Shift+P) and search for "Live Server: Open with Live Server"
+
 ## How to Contribute
 
 ### 1. Prerequisites
@@ -50,8 +71,6 @@ git push
 
 - GitHub Pages will update the website automatically within a few minutes after pushing.
 
----
-
 ## Tips
 
 - Always pull the latest changes before starting new work:
@@ -62,7 +81,5 @@ git push
 
 - For bigger changes, consider creating a branch and opening a Pull Request.
 - If you have questions, open an issue on GitHub.
-
----
 
 Happy contributing!

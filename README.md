@@ -83,3 +83,49 @@ git push
 - If you have questions, open an issue on GitHub.
 
 Happy contributing!
+
+## Edit pictures
+
+```python
+# convert_and_rename_bw.py
+import os
+import subprocess
+
+# Path to the folder containing your PNG files
+folder_path = "./input"
+
+# Starting number
+start_number = 1
+
+# Get list of PNG files sorted by name
+png_files = sorted([f for f in os.listdir(folder_path) if f.lower().endswith(".png")])
+
+# Create output folder (optional)
+output_folder = os.path.join(folder_path, "bw")
+os.makedirs(output_folder, exist_ok=True)
+
+for index, filename in enumerate(png_files, start=start_number):
+    old_path = os.path.join(folder_path, filename)
+    new_name = f"{index}.png"
+    new_path = os.path.join(output_folder, new_name)
+
+    # ImageMagick convert command to grayscale, resize to 500px height, and preserve transparency
+    subprocess.run([
+        "convert",
+        old_path,
+        "-colorspace", "gray",
+        "-trim",
+        "-resize", "x500",
+        "-background", "none",
+        "-alpha", "on",
+        new_path
+    ])
+
+    print(f"Converted & renamed: {filename} -> {new_name}")
+
+print("Done.")
+```
+
+```
+python3 convert_and_rename_bw.py
+```

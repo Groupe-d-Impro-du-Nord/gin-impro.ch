@@ -159,6 +159,22 @@
 
 		<script src="js/main.js"></script>
 		<script type="text/javascript">
+			// Shuffle the member vignettes on each page load
+			$(document).ready(function () {
+				var $gallery = $("#membresGallery");
+				var $membres = $gallery.children(".vignette.membre");
+				var membresArr = $membres.toArray();
+				// Fisher-Yates shuffle
+				for (let i = membresArr.length - 1; i > 0; i--) {
+					const j = Math.floor(Math.random() * (i + 1));
+					[membresArr[i], membresArr[j]] = [membresArr[j], membresArr[i]];
+				}
+				$gallery.empty();
+				$(membresArr).each(function () {
+					$gallery.append(this);
+				});
+			});
+
 			$("main").on("mousemove", function (e) {
 				$(".vignette").each(function (el) {
 					var randomAngle = Math.random() * 360;
@@ -170,7 +186,6 @@
 
 					angle -= 76;
 
-					console.log();
 					if ($(this).hasClass("membre"))
 						$(this).css("transform", "rotate(" + angle + "deg)");
 				});

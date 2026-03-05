@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Instantané - Partagez vos photos</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: #000000;
+				color: #ffffff;
+				font-family: "Arial", sans-serif;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				padding: 40px;
+				text-align: center;
+			}
+
+			.container {
+				max-width: 1200px;
+				width: 100%;
+			}
+
+			h1 {
+				font-size: 6rem;
+				margin-bottom: 30px;
+				font-weight: bold;
+				letter-spacing: 4px;
+				text-transform: uppercase;
+			}
+
+			.subtitle {
+				font-size: 2.8rem;
+				margin-bottom: 60px;
+				line-height: 1.5;
+				font-weight: 300;
+			}
+
+			.qr-container {
+				margin: 60px auto;
+				padding: 40px;
+				background-color: #ffffff;
+				border-radius: 20px;
+				display: inline-block;
+				animation: fadeIn 1s ease-in;
+				box-shadow: 0 10px 50px rgba(255, 255, 255, 0.2);
+			}
+
+			.qr-container img {
+				max-width: 700px;
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			.instructions {
+				font-size: 2.5rem;
+				margin-top: 80px;
+				line-height: 1.8;
+				font-weight: 300;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: scale(0.95);
+				}
+				to {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+
+			@media (max-width: 768px) {
+				h1 {
+					font-size: 3rem;
+				}
+
+				.subtitle {
+					font-size: 1.5rem;
+				}
+
+				.instructions {
+					font-size: 1.3rem;
+				}
+
+				.qr-container {
+					padding: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>INSTANTANÉ</h1>
+
+			<div class="subtitle">
+				Partagez vos photos de famille<br />
+				et inspirez nos improvisations !
+			</div>
+
+			<div class="qr-container">
+				<img
+					src="https://quickchart.io/qr?text=https%3A%2F%2Fforms.gle%2FJxtT4GkpmpkTpYi26&size=700&dark=000000&light=ffffff&ecLevel=H&centerImageUrl=https%3A%2F%2Fgin-impro.ch%2Fimages%2FlogoBlack.png&centerImageSizeRatio=0.2&margin=2"
+					alt="QR Code pour partager vos photos"
+				/>
+			</div>
+
+			<div class="instructions">
+				📱 Scannez • Envoyez • Voyez votre photo prendre vie sur scène ! 🎭
+			</div>
+		</div>
+	</body>
+</html>

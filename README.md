@@ -5,7 +5,8 @@
 ### Prerequisites
 
 - [Visual Studio Code](https://code.visualstudio.com/) installed
-- Visual Studio Code Extensions installed, they are listed in the `.vscode/extensions.json` file
+- Visual Studio Code Extensions installed, they are listed in the
+  `.vscode/extensions.json` file
 
 ### Run the Website Locally
 
@@ -19,7 +20,8 @@
 Alternatively, you can:
 
 - Use the "Go Live" button in the bottom status bar of VS Code
-- Use the Command Palette (Ctrl+Shift+P) and search for "Live Server: Open with Live Server"
+- Use the Command Palette (Ctrl+Shift+P) and search for "Live Server: Open with
+  Live Server"
 
 ## How to Contribute
 
@@ -27,7 +29,8 @@ Alternatively, you can:
 
 - [Git](https://git-scm.com/) installed
 - A [GitHub account](https://github.com/)
-- Permission to push to [Groupe-d-Impro-du-Nord/gin-impro.ch](https://github.com/Groupe-d-Impro-du-Nord/gin-impro.ch)
+- Permission to push to
+  [Groupe-d-Impro-du-Nord/gin-impro.ch](https://github.com/Groupe-d-Impro-du-Nord/gin-impro.ch)
 
 ### 2. Clone the Repository (first time only)
 
@@ -64,12 +67,15 @@ git commit -m "Describe your changes here"
 git push
 ```
 
-- The first time, GitHub may ask for your username and password or a personal access token (PAT).
-- If you have 2FA enabled, use a PAT instead of your password ([create one here](https://github.com/settings/tokens)).
+- The first time, GitHub may ask for your username and password or a personal
+  access token (PAT).
+- If you have 2FA enabled, use a PAT instead of your password
+  ([create one here](https://github.com/settings/tokens)).
 
 ### 8. Wait for Deployment
 
-- GitHub Pages will update the website automatically within a few minutes after pushing.
+- GitHub Pages will update the website automatically within a few minutes after
+  pushing.
 
 ## Tips
 

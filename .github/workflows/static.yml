@@ -11,7 +11,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -22,8 +22,25 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Format code with Prettier before deploying
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Prettier
+        run: npm install -g prettier
+      - name: Run Prettier
+        run: prettier --write .
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || (git add -A && git commit -m "style: auto-format with Prettier" && git push)
+
   # Single deploy job since we're just deploying
   deploy:
+    needs: format
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

@@ -1,0 +1,10 @@
+# Minified files
+*.min.js
+*.min.css
+
+# Third-party libraries
+lib/
+lottie-player.js
+
+# Lottie animation JSON (generated files)
+animes/

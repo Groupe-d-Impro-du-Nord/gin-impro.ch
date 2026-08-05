@@ -3,7 +3,7 @@ var main = document.getElementById("home");
 var tableDecoupe = [];
 
 var counter = 0;
-var nbrImg = 60;
+var nbrImg = 44;
 var nbrImgMax = 20;
 
 var memory = [0];
